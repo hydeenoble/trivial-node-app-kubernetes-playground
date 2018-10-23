@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual
+spec:
+  containers:
+  - image: hydeenoble/kubia
+    name: kubia
+    ports: 
+    - containerPort: 8085
+      protocol: TCP
