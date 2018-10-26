@@ -1,0 +1,13 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: kubia-liveness
+spec:
+  containers:
+  - name: kubia
+    image: hydeenoble/kubia
+    livenessProbe:
+      httpGet: 
+        path: /
+        port: 8085
+
