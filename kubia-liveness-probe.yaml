@@ -1,11 +1,11 @@
-kind: Pod
 apiVersion: v1
+kind: Pod
 metadata:
   name: kubia-liveness
 spec:
   containers:
-  - name: kubia
-    image: hydeenoble/kubia
+  - image: hydeenoble/kubia-unhealthy
+    name: kubia
     livenessProbe:
       httpGet: 
         path: /
